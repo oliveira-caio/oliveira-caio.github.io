@@ -8,7 +8,7 @@
 @import "reset";
 @import "variables";
 @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -205,7 +205,7 @@ img {
 .site-description {
   margin: -5px 0 0 0;
   color: $gray;
-  font-size: 14px;
+  font-size: 12px;
   font-family: 'Ubuntu Mono', monospace;
 
   @include mobile {
