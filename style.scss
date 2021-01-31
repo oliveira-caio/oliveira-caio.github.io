@@ -7,6 +7,7 @@
 
 @import "reset";
 @import "variables";
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -194,7 +195,7 @@ img {
   margin: 0;
   color: $black;
   cursor: pointer;
-  font-family: $roboto;
+  font-family: 'Hanalei', cursive;
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
