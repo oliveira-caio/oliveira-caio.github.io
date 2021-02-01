@@ -3,4 +3,6 @@ layout: page
 title: Projects
 ---
 
-another test.
+<p class="message">
+  testing again.
+</p>
