@@ -1,1 +1,6 @@
-Just a test.
+---
+layout: page
+title: Notes
+---
+
+testing.
