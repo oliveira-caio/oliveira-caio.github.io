@@ -196,9 +196,9 @@ img {
   margin: 0;
   color: $black;
   cursor: pointer;
-  font-family: 'Slabo 40px', serif;
+  font-family: 'Slabo 27px', serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 50px;
   letter-spacing: 1px;
 }
 
@@ -216,7 +216,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 18px;
 
   @include mobile {
