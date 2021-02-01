@@ -159,6 +159,7 @@ img {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
+  text-align: center;
 
   @include mobile {
     text-align: center;
@@ -214,10 +215,10 @@ img {
 }
 
 nav {
-  float: left;
+  float: center;
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: 'Ubuntu Mono', monospace;
-  font-size: 18px;
+  font-size: 20px;
 
   @include mobile {
     float: none;
