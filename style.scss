@@ -198,7 +198,7 @@ img {
   cursor: pointer;
   font-family: 'Slabo 27px', serif;
   font-weight: 300;
-  font-size: 28px;
+  font-size: 60px;
   letter-spacing: 1px;
 }
 
@@ -209,14 +209,14 @@ img {
   font-family: 'Ubuntu Mono', monospace;
 
   @include mobile {
-    margin: 2px 0;
+    margin: 3px 0;
   }
 }
 
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 18px;
 
   @include mobile {
