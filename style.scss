@@ -220,7 +220,7 @@ img {
     font-family: 'Ubuntu Mono', monospace;
 
     @include mobile {
-	//margin: 3px 0;
+	margin-top: 5px;
 	font-size: 14px;
     }
 }
