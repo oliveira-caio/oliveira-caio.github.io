@@ -28,7 +28,6 @@ body {
 .container {
     margin: 0 auto;
     max-width: 740px;
-    margin: 10px;
     width: 100%;
 }
 
@@ -120,7 +119,7 @@ img {
 .date {
     //font-style: italic;
     color: $pastelRed;
-    margin: 0;
+    margin: -10px;
 }
 
 // Specify the color of the selection
@@ -210,7 +209,7 @@ img {
 }
 
 .site-description {
-    margin-top: -40px;
+    margin-top: -30px;
     color: $black;
     font-size: 30px;
     font-family: 'Ubuntu Mono', monospace;
