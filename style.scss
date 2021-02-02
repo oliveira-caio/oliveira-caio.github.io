@@ -201,26 +201,32 @@ img {
     cursor: pointer;
     font-family: 'Slabo 27px', serif;
     font-weight: 300;
-    font-size: 60px;
+    font-size: 100px;
     letter-spacing: 1px;
+
+    @include mobile {
+	font-size: 60px;
+    }
 }
 
 .site-description {
     margin: -5px 0 0 0;
     color: $black;
-    font-size: 14px;
+    font-size: 30px;
     font-family: 'Ubuntu Mono', monospace;
 
     @include mobile {
 	margin: 3px 0;
+	font-size: 14px;
     }
 }
 
 nav {
-    float: center;
+    //float: center;
+    float: none;
     margin-top: 23px; // @TODO: Vertically middle align
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 20px;
+    font-size: 25px;
 
     @include mobile {
 	float: none;
@@ -231,7 +237,8 @@ nav {
 
     a {
 	margin-left: 20px;
-	color: $darkGray;
+	//color: $darkGray;
+	color: $pastelRed;
 	text-align: right;
 	font-weight: 300;
 	letter-spacing: 1px;
