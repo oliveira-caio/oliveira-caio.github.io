@@ -2,41 +2,18 @@
 layout: default
 ---
 
-<!-- <article class="post"> -->
+<article class="post">
   
-<!--   <header> -->
-<!--     <h1>{{ page.title }}</h1> -->
-<!--     Posted on {{ page.date | date: "%B %-d, %Y" }}. -->
-<!--   </header> -->
-  
-<!--   <div class="entry"> -->
-<!--     {{ content }} -->
-<!--   </div> -->
-
-<!--   {% include disqus.html %} -->
-<!-- </article> -->
-
-<article itemscope itemtype="http://schema.org/BlogPosting" class="blog-post">
   <header>
-    <h3 itemprop="name headline">{{ page.title }}
-      <span style="display:none"
-	    itemprop="author"
-	    itemscope
-	    itemtype="http://schema.org/Person">
-	<span itemprop="name">Caio Oliveira</span>
-      </span>
-      {% assign words = content | number_of_words %}
-      {% if words >= 360 %}
-      <span class="reading-time">
-	({{ words | divided_by:180 }} min. read)
-      </span>
-      {% endif %}
-    </h3>
-    <span class="shared">
-      Posted on <span itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</span>
+    <h1>{{ page.title }}</h1>
+    <span class="date">
+      Posted on {{ page.date | date: "%B %-d, %Y" }}.
     </span>
   </header>
-  <div itemprop="articleBody" class="hyphenate">
+  
+  <div class="entry">
     {{ content }}
   </div>
+
+  {% include disqus.html %}
 </article>
