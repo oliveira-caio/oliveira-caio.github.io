@@ -220,14 +220,14 @@ img {
     font-family: 'Ubuntu Mono', monospace;
 
     @include mobile {
-	margin-top: 5px;
+	margin-top: 15px;
 	font-size: 14px;
     }
 }
 
 nav {
     float: none;
-    margin-top: 23px; // @TODO: Vertically middle align
+    margin-top: 15px; // @TODO: Vertically middle align
     font-family: 'Ubuntu Mono', monospace;
     font-size: 25px;
 
@@ -257,7 +257,7 @@ nav {
 //
 
 .posts > .post {
-    padding-bottom: 0;
+    padding-bottom: 10px;
     border-bottom: 1px solid $black;
 }
 
