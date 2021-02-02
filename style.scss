@@ -153,10 +153,6 @@ img {
 // .masthead
 //
 
-.teste {
-    display: inline-block;
-}
-
 .wrapper-masthead {
     margin-bottom: 30px;
 }
@@ -227,7 +223,7 @@ img {
 
 nav {
     float: none;
-    margin-top: 15px; // @TODO: Vertically middle align
+    margin-top: 10px; // @TODO: Vertically middle align
     font-family: 'Ubuntu Mono', monospace;
     font-size: 25px;
 
@@ -258,6 +254,7 @@ nav {
 
 .posts > .post {
     padding-bottom: 10px;
+    padding-top: 10px;
     border-bottom: 1px solid $black;
 }
 
@@ -276,6 +273,10 @@ nav {
 	font-style: italic;
     }
 
+    .date{
+	margin-top: -5px;
+    }
+    
     .comments {
 	margin-top: 10px;
     }
