@@ -30,7 +30,6 @@ body {
     max-width: 740px;
     padding: 0 10px;
     width: 100%;
-    border-bottom: 1px solid $black; // added
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -159,7 +158,7 @@ img {
 
 .masthead {
     padding: 20px 0;
-    border-bottom: 2px solid $black;
+    //border-bottom: 2px solid $black;
     text-align: center;
 
     @include mobile {
@@ -223,7 +222,6 @@ img {
 }
 
 nav {
-    //float: center;
     float: none;
     margin-top: 23px; // @TODO: Vertically middle align
     font-family: 'Ubuntu Mono', monospace;
@@ -238,9 +236,8 @@ nav {
 
     a {
 	margin-left: 20px;
-	//color: $darkGray;
 	color: $pastelRed;
-	text-align: right;
+	text-align: center;
 	font-weight: 300;
 	letter-spacing: 1px;
 
@@ -257,7 +254,7 @@ nav {
 
 .posts > .post {
     padding-bottom: 2em;
-    border-bottom: 1px solid $lightGray;
+    border-bottom: 1px solid $black;
 }
 
 .posts > .post:last-child {
