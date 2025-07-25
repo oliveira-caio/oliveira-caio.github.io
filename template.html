@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <script>
         // Prevent flash of wrong theme by applying theme immediately
-        (function() {
+        (function () {
             const isFileProtocol = window.location.protocol === 'file:';
-            
+
             function getStoredTheme() {
                 if (isFileProtocol) {
                     const value = `; ${document.cookie}`;
@@ -21,11 +21,11 @@
                 }
                 return localStorage.getItem('theme');
             }
-            
+
             const savedTheme = getStoredTheme();
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             const theme = savedTheme || systemTheme;
-            
+
             document.documentElement.setAttribute('data-theme', theme);
             document.body.setAttribute('data-theme', theme);
         })();
@@ -36,9 +36,8 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <h1 class="site-title"><a href="index.html">Your Name</a></h1>
+                <h1 class="site-title"><a href="./">Your Name</a></h1>
                 <nav class="navigation">
-                    <a href="index.html" class="nav-link">About</a>
                     <a href="projects.html" class="nav-link">Projects</a>
                     <a href="publications.html" class="nav-link">Publications</a>
                     <!-- Add more navigation links as needed -->
