@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - Caio da Silva</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Prevent flash of wrong theme by applying theme immediately
+        (function() {
+            const isFileProtocol = window.location.protocol === 'file:';
+            
+            function getStoredTheme() {
+                if (isFileProtocol) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; theme=`);
+                    return parts.length === 2 ? parts.pop().split(';').shift() : null;
+                }
+                return localStorage.getItem('theme');
+            }
+            
+            const savedTheme = getStoredTheme();
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const theme = savedTheme || systemTheme;
+            
+            document.documentElement.setAttribute('data-theme', theme);
+            document.body.setAttribute('data-theme', theme);
+        })();
+    </script>
 </head>
 
 <body>

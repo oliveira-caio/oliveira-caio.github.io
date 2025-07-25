@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/* Prevent flash of wrong theme */
+html {
+    background-color: #ffffff;
+}
+
+html[data-theme="dark"] {
+    background-color: #1a1a1a;
+}
+
 /* CSS Variables for theming */
 :root {
     --bg-color: #ffffff;

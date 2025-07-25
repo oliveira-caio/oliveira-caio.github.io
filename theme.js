@@ -37,15 +37,6 @@ const ThemeStorage = {
     }
 };
 
-// Apply theme immediately to prevent flash
-(function () {
-    const savedTheme = ThemeStorage.get('theme');
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const initialTheme = savedTheme || systemTheme;
-    document.documentElement.setAttribute('data-theme', initialTheme);
-    document.body.setAttribute('data-theme', initialTheme);
-})();
-
 document.addEventListener('DOMContentLoaded', function () {
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
