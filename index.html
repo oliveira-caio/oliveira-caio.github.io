@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caio da Silva - PhD Candidate</title>
+    <title>Caio</title>
     <link rel="stylesheet" href="style.css">
     <script>
         // Prevent flash of wrong theme by applying theme immediately
-        (function() {
+        (function () {
             const isFileProtocol = window.location.protocol === 'file:';
-            
+
             function getStoredTheme() {
                 if (isFileProtocol) {
                     const value = `; ${document.cookie}`;
@@ -19,11 +19,11 @@
                 }
                 return localStorage.getItem('theme');
             }
-            
+
             const savedTheme = getStoredTheme();
             const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
             const theme = savedTheme || systemTheme;
-            
+
             document.documentElement.setAttribute('data-theme', theme);
             document.body.setAttribute('data-theme', theme);
         })();
