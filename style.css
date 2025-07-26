@@ -649,11 +649,60 @@ a:hover {
     .cv-item-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 5px;
+        gap: 10px;
+        margin-bottom: 0px;
     }
 
     .cv-item-title {
         min-width: 100%;
+        color: var(--heading-color);
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .cv-item-date {
+        color: var(--text-secondary);
+        font-size: 1.15em;
+        font-weight: 500;
+    }
+
+    .cv-item-org {
+        color: var(--accent-color);
+        font-weight: normal;
+        font-size: 1.15em;
+        margin-bottom: 0px;
+    }
+
+    .cv-item-role {
+        color: var(--text-color);
+        font-style: italic;
+        font-weight: normal;
+        margin-bottom: 0px;
+        font-size: 1.15em;
+    }
+
+    .cv-item-details {
+        color: var(--text-color);
+        line-height: 1.4;
+        font-size: 1.15em;
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .cv-section-title {
+        color: var(--heading-color);
+        font-size: 1.75em;
+        font-weight: bold;
+        margin-bottom: 8px;
+        padding-bottom: 4px;
+        border-bottom: 2px solid var(--accent-color);
+    }
+
+    .cv-item {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--border-color);
     }
 
     .cv-skills-grid {
