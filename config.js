@@ -77,13 +77,13 @@ window.SiteConfig = {
 
         if (socialLinks.length >= 3) {
             // Update GitHub link
-            socialLinks[0].href = this.socialLinks.github;
+            socialLinks[0].href = this.links.github;
 
             // Update Google Scholar link  
-            socialLinks[1].href = this.socialLinks.scholar;
+            socialLinks[1].href = this.links.scholar;
 
             // Update LinkedIn link
-            socialLinks[2].href = this.socialLinks.linkedin;
+            socialLinks[2].href = this.links.linkedin;
         }
     }
 };

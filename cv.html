@@ -26,7 +26,10 @@
             const theme = savedTheme || systemTheme;
 
             document.documentElement.setAttribute('data-theme', theme);
-            document.body.setAttribute('data-theme', theme);
+            // Set body theme after DOM loads
+            document.addEventListener('DOMContentLoaded', function () {
+                document.body.setAttribute('data-theme', theme);
+            });
         })();
     </script>
 </head>

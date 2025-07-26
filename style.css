@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -380,6 +383,10 @@ a:hover {
 
     nav a {
         font-size: 1.35em;
+    }
+
+    .social-links {
+        font-size: 1.1em;
     }
 
     main {
