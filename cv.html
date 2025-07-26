@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Caio da Silva</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
+    <script>
+        // Prevent flash of wrong theme by applying theme immediately
+        (function () {
+            const isFileProtocol = window.location.protocol === 'file:';
+
+            function getStoredTheme() {
+                if (isFileProtocol) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; theme=`);
+                    return parts.length === 2 ? parts.pop().split(';').shift() : null;
+                }
+                return localStorage.getItem('theme');
+            }
+
+            const savedTheme = getStoredTheme();
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            const theme = savedTheme || systemTheme;
+
+            document.documentElement.setAttribute('data-theme', theme);
+            document.body.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1><a href="./">Caio da Silva</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="cv.html" class="active">CV</a></li>
+                    </ul>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="theme-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                        <svg class="theme-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <path
+                                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
+                            </path>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-section">
+
+                <div class="cv-content">
+                    <!-- Education -->
+                    <section class="cv-section">
+                        <h3 class="cv-section-title">Education</h3>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">PhD in Data Science</h4>
+                                <span class="cv-item-date">2023 – Present</span>
+                            </div>
+                            <div class="cv-item-org">University of Goettingen, Germany</div>
+                            <div class="cv-item-role">Supervisor: Fabian Sinz</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">MSc in Applied Mathematics</h4>
+                                <span class="cv-item-date">2020 – 2023</span>
+                            </div>
+                            <div class="cv-item-org">Federal University of ABC, Brazil</div>
+                            <div class="cv-item-role">Supervisor: Yuri Aoto</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">BSc in Mathematics</h4>
+                                <span class="cv-item-date">2016 – 2019</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo, Brazil</div>
+                            <div class="cv-item-role">Supervisor: Carlos Grossi</div>
+                        </div>
+                    </section>
+
+                    <!-- Research Experience -->
+                    <section class="cv-section">
+                        <h3 class="cv-section-title">Research Experience</h3>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Neuronal Intelligence Lab</h4>
+                                <span class="cv-item-date">2023 – 2026</span>
+                            </div>
+                            <div class="cv-item-org">University of Goettingen</div>
+                            <div class="cv-item-role">Research Assistant. Supervisor: Fabian Sinz</div>
+                            <div class="cv-item-details">Developed deep learning models to predict neural activity and
+                                behavior of monkeys and helped developing a Diffusion Model to lift 2D motion to 3D.
+                            </div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Computational Quantum Chemistry Lab</h4>
+                                <span class="cv-item-date">2020 – 2023</span>
+                            </div>
+                            <div class="cv-item-org">Federal University of ABC</div>
+                            <div class="cv-item-role">Research Assistant. Supervisor: Yuri Aoto</div>
+                            <div class="cv-item-details">Developed in Python and Cython a geometric version of
+                                optimization algorithms such as Gradient Descent, Newton's Method and Conjugate
+                                Gradient.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Hyperbolic and Complex Geometry Lab</h4>
+                                <span class="cv-item-date">2018 – 2019</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-role">Research Assistant. Supervisor: Carlos Grossi</div>
+                            <div class="cv-item-details">Studied in detail the proof of several theorems bridging the
+                                gap between Complex and Hyperbolic Geometry.</div>
+                        </div>
+                    </section>
+
+                    <!-- Achievements -->
+                    <section class="cv-section">
+                        <h3 class="cv-section-title">Achievements</h3>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Poster presentation at Cosyne 2025</h4>
+                                <span class="cv-item-date">2025</span>
+                            </div>
+                            <div class="cv-item-details">My poster <em>An encoding model to study the sensorimotor
+                                    cortex of freely-behaving monkeys</em> was accepted to Cosyne 2025.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Oral talk at the 58th Symposium on Theoretical Chemistry</h4>
+                                <span class="cv-item-date">2022</span>
+                            </div>
+                            <div class="cv-item-details">My poster <em>Newton's Method for Hartree–Fock: Lagrange and
+                                    Riemann</em> was one of the 19 out of 200+ accepted for an oral talk.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Distinction award for poster presentation at the XXI Brazilian
+                                    Symposium on Theoretical Chemistry</h4>
+                                <span class="cv-item-date">2021</span>
+                            </div>
+                            <div class="cv-item-details">Award received for my poster <em>How to use geometry to
+                                    optimise the Hartree–Fock wave function</em>.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">FAPESP scholarship</h4>
+                                <span class="cv-item-date">2020-2023</span>
+                            </div>
+                            <div class="cv-item-details">MSc project funded by the Sao Paulo Research Foundation
+                                (FAPESP).</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">PIBIC scholarship</h4>
+                                <span class="cv-item-date">2018-2019</span>
+                            </div>
+                            <div class="cv-item-details">Undergraduate research funded by the University of Sao Paulo.
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Teaching Experience -->
+                    <section class="cv-section">
+                        <h3 class="cv-section-title">Teaching Experience</h3>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Probabilistic Machine Learning</h4>
+                                <span class="cv-item-date">2023, 2024</span>
+                            </div>
+                            <div class="cv-item-org">University of Goettingen</div>
+                            <div class="cv-item-role">Teaching Assistant</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Current Topics in Machine Learning and Computational
+                                    Neuroscience</h4>
+                                <span class="cv-item-date">2024, 2025</span>
+                            </div>
+                            <div class="cv-item-org">University of Goettingen</div>
+                            <div class="cv-item-role">Student Supervisor</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Short course on Computational Algebraic Topology</h4>
+                                <span class="cv-item-date">2021</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-role">Lecturer</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Elements of Mathematics</h4>
+                                <span class="cv-item-date">2019</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-role">Teaching Assistant</div>
+                        </div>
+                    </section>
+
+                    <!-- Extracurricular -->
+                    <section class="cv-section">
+                        <h3 class="cv-section-title">Extracurricular</h3>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">NeuroStammtisch organizer</h4>
+                                <span class="cv-item-date">2024 – Present</span>
+                            </div>
+                            <div class="cv-item-details">Monthly social meetings aimed to bring the neuroscience
+                                community of Goettingen together.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Neuro-treff organizer</h4>
+                                <span class="cv-item-date">2024 – Present</span>
+                            </div>
+                            <div class="cv-item-details">Mailing list aimed to advertise neuroscience events happening
+                                in the city of Goettingen to the academic community.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Member of Ganesh</h4>
+                                <span class="cv-item-date">2021</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-details">Study group focused on information security.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Member of GEMA</h4>
+                                <span class="cv-item-date">2021</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-details">Study group focused on competitive programming.</div>
+                        </div>
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
+                                <h4 class="cv-item-title">Reading group organizer</h4>
+                                <span class="cv-item-date">2018</span>
+                            </div>
+                            <div class="cv-item-org">University of Sao Paulo</div>
+                            <div class="cv-item-details">Reading group on the topic of Algebraic Topology.</div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="theme.js"></script>
+</body>
+
+</html>

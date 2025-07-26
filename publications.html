@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications :: Caio da Silva</title>
+    <title>Publications - Caio da Silva</title>
     <link rel="stylesheet" href="style.css">
+    <script src="config.js"></script>
     <script>
         // Prevent flash of wrong theme by applying theme immediately
         (function () {
@@ -34,11 +35,12 @@
     <div class="container">
         <header>
             <div class="header-content">
-                <h1><a href="./">caio da silva</a></h1>
+                <h1><a href="./">Caio da Silva</a></h1>
                 <nav>
                     <ul>
-                        <li><a href="projects.html">projects</a></li>
-                        <li><a href="publications.html" class="active">publications</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="publications.html" class="active">Publications</a></li>
+                        <li><a href="cv.html">CV</a></li>
                     </ul>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
                         <svg class="theme-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -64,39 +66,31 @@
 
         <main>
             <section class="content-section">
-                <h2 class="section-title">Publications</h2>
                 <div class="content-list">
-                    <article class="content-item">
-                        <h3 class="content-item-title"><a href="#">Paper Title 1</a></h3>
-                        <div class="content-item-meta">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
-                        <div class="content-item-meta">Conference/Journal Name, Year</div>
-                        <p class="content-item-description">Brief description or abstract of the publication.</p>
-                        <div class="content-item-links">
-                            <a href="#" class="content-item-link" target="_blank">PDF</a>
-                            <a href="#" class="content-item-link" target="_blank">DOI</a>
-                            <a href="#" class="content-item-link" target="_blank">Code</a>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h4 class="cv-item-title"><a href="#">Paper Title 1</a></h4>
+                            <span class="cv-item-date">2025</span>
                         </div>
-                    </article>
-                    <article class="content-item">
-                        <h3 class="content-item-title"><a href="#">Paper Title 2</a></h3>
-                        <div class="content-item-meta">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
-                        <div class="content-item-meta">Conference/Journal Name, Year</div>
-                        <p class="content-item-description">Brief description or abstract of the publication.</p>
-                        <div class="content-item-links">
-                            <a href="#" class="content-item-link" target="_blank">PDF</a>
-                            <a href="#" class="content-item-link" target="_blank">DOI</a>
+                        <div class="cv-item-role">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
+                        <div class="cv-item-org">Conference/Journal Name</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h4 class="cv-item-title"><a href="#">Paper Title 2</a></h4>
+                            <span class="cv-item-date">2024</span>
                         </div>
-                    </article>
-                    <article class="content-item">
-                        <h3 class="content-item-title"><a href="#">Paper Title 3</a></h3>
-                        <div class="content-item-meta">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
-                        <div class="content-item-meta">Conference/Journal Name, Year</div>
-                        <p class="content-item-description">Brief description or abstract of the publication.</p>
-                        <div class="content-item-links">
-                            <a href="#" class="content-item-link" target="_blank">PDF</a>
-                            <a href="#" class="content-item-link" target="_blank">ArXiv</a>
+                        <div class="cv-item-role">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
+                        <div class="cv-item-org">Conference/Journal Name</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <h4 class="cv-item-title"><a href="#">Paper Title 3</a></h4>
+                            <span class="cv-item-date">2023</span>
                         </div>
-                    </article>
+                        <div class="cv-item-role">Author Names, <strong>Caio da Silva</strong>, Other Authors</div>
+                        <div class="cv-item-org">Conference/Journal Name</div>
+                    </div>
                 </div>
             </section>
         </main>

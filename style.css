@@ -16,23 +16,35 @@ html[data-theme="dark"] {
 
 /* CSS Variables for theming */
 :root {
+    /* Color scheme */
+    --text-color: #000000;
     --bg-color: #ffffff;
-    --text-color: #333333;
-    --text-secondary: #555555;
-    --text-muted: #7f8c8d;
-    --heading-color: #2c3e50;
+    --link-color: #2980b9;
+    --link-hover-color: #3498db;
+    --border-color: #e0e0e0;
+    --code-bg: #f8f9fa;
+    --nav-bg: #f7f7f7;
+    --header-border: #ddd;
+
+    /* Additional theme variables */
+    --text-secondary: #333333;
+    --text-muted: #555555;
+    --heading-color: #000000;
     --accent-color: #3498db;
-    --border-color: #eeeeee;
-    --border-secondary: #e1e8ed;
-    --project-bg: #f8f9fa;
+    --border-secondary: #e0e0e0;
+    --project-bg: #ffffff;
     --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Typography */
+    --font-family: 'EB Garamond', 'Garamond', 'Times New Roman', serif;
+    --line-height: 1.6;
 }
 
 [data-theme="dark"] {
     --bg-color: #1a1a1a;
-    --text-color: #e0e0e0;
-    --text-secondary: #c0c0c0;
-    --text-muted: #a0a0a0;
+    --text-color: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #c0c0c0;
     --heading-color: #ffffff;
     --accent-color: #5dade2;
     --border-color: #333333;
@@ -42,8 +54,8 @@ html[data-theme="dark"] {
 }
 
 body {
-    font-family: 'Iosevka', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', 'Menlo', 'Consolas', monospace;
-    line-height: 1.6;
+    font-family: var(--font-family);
+    line-height: var(--line-height);
     color: var(--text-color);
     background-color: var(--bg-color);
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -67,12 +79,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    max-width: 650px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 header h1 {
-    font-size: 1.5em;
+    font-size: 2.25em;
     font-weight: 400;
     margin: 0;
     color: var(--heading-color);
@@ -111,7 +123,7 @@ nav a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 400;
-    font-size: 0.95em;
+    font-size: 1.425em;
     padding: 0;
     border-radius: 0;
     transition: color 0.2s ease;
@@ -169,9 +181,9 @@ nav a.active {
 
 /* Main content */
 main {
-    max-width: 650px;
+    max-width: 700px;
     margin: 60px auto;
-    padding: 0 40px;
+    padding: 0;
     padding-bottom: 120px;
 }
 
@@ -181,14 +193,14 @@ main {
 }
 
 .section-title {
-    font-size: 1.8em;
+    font-size: 2.7em;
     margin-bottom: 20px;
     color: var(--heading-color);
     font-weight: 400;
 }
 
 .section-subtitle {
-    font-size: 1.3em;
+    font-size: 1.95em;
     margin-bottom: 10px;
     color: var(--heading-color);
     font-weight: 500;
@@ -198,7 +210,7 @@ main {
     margin-bottom: 20px;
     color: var(--text-secondary);
     line-height: 1.6;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 /* Legacy support - keep existing selectors working */
@@ -207,7 +219,7 @@ section {
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 2.7em;
     margin-bottom: 20px;
     color: var(--heading-color);
     font-weight: 400;
@@ -216,17 +228,17 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 1.95em;
     margin-bottom: 10px;
     color: var(--heading-color);
     font-weight: 500;
 }
 
 p {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     color: var(--text-secondary);
-    line-height: 1.6;
-    font-size: 1em;
+    line-height: 1.4;
+    font-size: 1.05em;
 }
 
 /* Links */
@@ -250,7 +262,7 @@ a:hover {
     background: var(--project-bg);
     border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -260,14 +272,14 @@ a:hover {
 }
 
 .content-item-title {
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .content-item-title a {
-    color: var(--heading-color);
-    font-size: 1.3em;
-    font-weight: 500;
+    font-size: 1.4em;
     text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
 }
 
 .content-item-title a:hover {
@@ -275,10 +287,15 @@ a:hover {
     text-decoration: underline;
 }
 
+.content-item-description {
+    font-size: 1.2em;
+}
+
 .content-item-meta {
-    font-size: 0.9em;
+    font-size: 1.25em;
     color: var(--text-muted);
-    margin-bottom: 8px;
+    margin-bottom: 0px;
+    font-style: italic;
 }
 
 .content-item-links {
@@ -293,7 +310,7 @@ a:hover {
     color: white;
     padding: 5px 12px;
     border-radius: 4px;
-    font-size: 0.85em;
+    font-size: 1.275em;
     text-decoration: none;
     transition: background-color 0.2s ease;
 }
@@ -301,6 +318,34 @@ a:hover {
 .content-item-links a:hover {
     background: var(--heading-color);
     text-decoration: none;
+}
+
+/* Social links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 1.35em;
+    color: var(--text-secondary);
+}
+
+.social-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover {
+    color: var(--heading-color);
+    text-decoration: underline;
+}
+
+.social-separator {
+    color: var(--text-secondary);
+    margin: 0 4px;
 }
 
 /* Responsive design */
@@ -334,7 +379,7 @@ a:hover {
     }
 
     nav a {
-        font-size: 0.9em;
+        font-size: 1.35em;
     }
 
     main {
@@ -344,7 +389,7 @@ a:hover {
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 2.25em;
     }
 }
 
@@ -375,5 +420,247 @@ a:hover {
         margin: 30px auto;
         padding: 0 15px;
         padding-bottom: 80px;
+    }
+}
+
+/* CV Page Styles */
+.cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cv-header h2 {
+    color: var(--heading-color);
+    font-size: 3em;
+    margin: 0;
+}
+
+.cv-download-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.35em;
+    transition: background-color 0.2s ease;
+}
+
+.cv-download-link:hover {
+    background-color: var(--link-hover-color);
+    color: white;
+}
+
+.cv-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section-title {
+    color: var(--heading-color);
+    font-size: 1.75em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.cv-subsection-title {
+    color: var(--heading-color);
+    font-size: 1.65em;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.cv-item {
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cv-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cv-item-title {
+    color: var(--heading-color);
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    min-width: 60%;
+}
+
+.cv-item-date {
+    color: var(--text-secondary);
+    font-size: 1.15em;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.cv-item-org {
+    color: var(--accent-color);
+    font-weight: normal;
+    font-size: 1.15em;
+    margin-bottom: 0px;
+}
+
+.cv-item-meta {
+    color: var(--text-color);
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.15em;
+}
+
+.cv-item-role {
+    color: var(--text-color);
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 0px;
+    font-size: 1.15em;
+}
+
+.cv-item-details {
+    color: var(--text-color);
+    line-height: 1.4;
+    font-size: 1.15em;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.cv-item-details p {
+    margin: 1px 0;
+}
+
+.cv-achievement-title {
+    color: var(--heading-color);
+    font-size: 1.575em;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+}
+
+.cv-achievement-desc {
+    color: var(--text-color);
+    line-height: 1.4;
+    margin: 0;
+    font-size: 1.15em;
+}
+
+.cv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-list li {
+    color: var(--text-color);
+    margin-bottom: 4px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1.15em;
+}
+
+.cv-list li::before {
+    content: "▪";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.cv-skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.cv-skill-category {
+    background-color: var(--code-bg);
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.cv-skill-title {
+    color: var(--heading-color);
+    font-size: 1em;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.cv-skill-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cv-skill-list li {
+    color: var(--text-color);
+    margin-bottom: 6px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 0.9em;
+}
+
+.cv-skill-list li::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+.cv-languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.cv-language-item {
+    color: var(--text-color);
+    padding: 10px 0;
+}
+
+/* Responsive design for CV */
+@media (max-width: 768px) {
+    .cv-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .cv-item-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .cv-item-title {
+        min-width: 100%;
+    }
+
+    .cv-skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-languages-grid {
+        grid-template-columns: 1fr;
     }
 }
