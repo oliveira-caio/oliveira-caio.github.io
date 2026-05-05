@@ -60,6 +60,9 @@ body {
     max-width: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header */
@@ -178,7 +181,8 @@ main {
     max-width: 700px;
     margin: 60px auto;
     padding: 0;
-    padding-bottom: 120px;
+    flex-grow: 1;
+    width: 100%;
 }
 
 .content-text {
@@ -248,6 +252,13 @@ a:hover {
 .social-separator {
     color: var(--text-secondary);
     margin: 0 4px;
+}
+
+/* Footer */
+.social-links.footer {
+    margin-top: auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 /* Responsive design */

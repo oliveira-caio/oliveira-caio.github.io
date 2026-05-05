@@ -36,31 +36,6 @@
 
 <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <h1><a href="./">Caio da Silva</a></h1>
-                <nav>
-                    <ul>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="cv.html" class="active">CV</a></li>
-                    </ul>
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <svg class="theme-toggle-icon moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg class="theme-toggle-icon sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <path
-                                d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42">
-                            </path>
-                        </svg>
-                    </button>
-                </nav>
-            </div>
-        </header>
 
         <main>
             <section class="page-section">
@@ -106,10 +81,10 @@
                             </div>
                             <div class="cv-item-org">University of Goettingen</div>
                             <div class="cv-item-role">Research Assistant. Supervisor: Fabian Sinz</div>
-                            <div class="cv-item-details">Developed several tools (for data preprocessing and
-                                visualization, e.g.) and deep learning architectures in PyTorch to
-                                analyse poses (from monkeys and humans), neural
-                                activity (electrophysiology data from monkeys) and how they are related to each other.
+                            <div class="cv-item-details">Developed several tools (for data processing and
+                                visualization) and deep probabilistic models in PyTorch to analyse poses (from monkeys
+                                and humans), neural activity (electrophysiology data from monkeys) and how they relate
+                                to each other.
                             </div>
                         </div>
 
@@ -172,7 +147,7 @@
                         <div class="cv-item">
                             <div class="cv-item-header">
                                 <h4 class="cv-item-title">FAPESP Scholarship</h4>
-                                <span class="cv-item-date">2020-2023</span>
+                                <span class="cv-item-date">2020 – 2023</span>
                             </div>
                             <div class="cv-item-details">MSc project funded by the Sao Paulo Research Foundation
                                 (FAPESP).</div>
@@ -181,7 +156,7 @@
                         <div class="cv-item">
                             <div class="cv-item-header">
                                 <h4 class="cv-item-title">PIBIC Scholarship</h4>
-                                <span class="cv-item-date">2018-2019</span>
+                                <span class="cv-item-date">2018 – 2019</span>
                             </div>
                             <div class="cv-item-details">Undergraduate research funded by the University of Sao Paulo.
                             </div>
@@ -194,8 +169,18 @@
 
                         <div class="cv-item">
                             <div class="cv-item-header">
+                                <h4 class="cv-item-title">Data Science</h4>
+                                <span class="cv-item-date">2026</span>
+                            </div>
+                            <div class="cv-item-org">University of Goettingen</div>
+                            <div class="cv-item-role">Teaching Assistant</div>
+                        </div>
+
+
+                        <div class="cv-item">
+                            <div class="cv-item-header">
                                 <h4 class="cv-item-title">Probabilistic Machine Learning</h4>
-                                <span class="cv-item-date">2023, 2024</span>
+                                <span class="cv-item-date">2023 – 2024</span>
                             </div>
                             <div class="cv-item-org">University of Goettingen</div>
                             <div class="cv-item-role">Teaching Assistant</div>
@@ -205,7 +190,7 @@
                             <div class="cv-item-header">
                                 <h4 class="cv-item-title">Current Topics in Machine Learning and Computational
                                     Neuroscience</h4>
-                                <span class="cv-item-date">2024, 2025</span>
+                                <span class="cv-item-date">2024 – 2026</span>
                             </div>
                             <div class="cv-item-org">University of Goettingen</div>
                             <div class="cv-item-role">Student Supervisor</div>
@@ -217,7 +202,9 @@
                                 <span class="cv-item-date">2021</span>
                             </div>
                             <div class="cv-item-org">University of Sao Paulo</div>
-                            <div class="cv-item-role">Lecturer</div>
+                            <div class="cv-item-role">Lecturer, videos (in Portuguese) available <a
+                                    href="https://youtube.com/playlist?list=PL_lKpXo0N7jpXbMRJGb0Ec1b7E3cv14Gu&si=6p-HevFQGLnBGSt-">here</a>
+                            </div>
                         </div>
 
                         <div class="cv-item">
@@ -294,6 +281,8 @@
         </main>
     </div>
 
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
     <script src="theme.js"></script>
 </body>
 
